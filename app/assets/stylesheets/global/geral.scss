@@ -25,6 +25,10 @@ main {
     text-align: justify;
 }
 
+.justify-text {
+    text-align: justify;
+}
+
 .justify-center {
     justify-content: center;
 }
@@ -49,6 +53,14 @@ main {
 
 .cell-12 {
     width: 100%;
+}
+
+.cell-9 {
+    width: 75%;
+}
+
+.cell-8 {
+    width: 66.66%;
 }
 
 .cell-6 {
