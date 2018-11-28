@@ -2,5 +2,6 @@ Rails.application.routes.draw do
   resources :equipes
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root "application#index"
-  get "about", to: "about#index"
+  get "sobre", to: "about#index"
+  get "quem-somos", to: "quemsomos#index"
 end
