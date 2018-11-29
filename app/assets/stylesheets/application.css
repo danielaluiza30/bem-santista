@@ -38,3 +38,7 @@ textarea:focus {
 button {
     cursor: pointer;
 }
+
+img {
+    flex-shrink: 0;
+}

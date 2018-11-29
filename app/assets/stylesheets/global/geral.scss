@@ -43,6 +43,10 @@ main {
     flex-wrap: wrap;
 }
 
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
 [class*="cell-"] {
     display: flex;
 }
