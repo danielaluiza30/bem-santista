@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   get "quem-somos", to: "quemsomos#index"
   get "contato", to: "contato#index"
   get "instituicoes", to: "instituicoes#index"
+  
+  get "sou-instituicao", to: "sou_instituicao#index"
 end

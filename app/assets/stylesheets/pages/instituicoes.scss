@@ -5,5 +5,13 @@
 
 .instituicoes-list-box {
     width: 250px;
-    background-color: black;
+    border-right: 1px solid #aaa;
+    ul {
+        width: 100%;
+    }
+    li {
+        box-sizing: border-box;
+        padding: 20px 10px;
+        border-bottom: 1px solid #aaa;
+    }
 }
