@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   root "application#index"
   get "sobre", to: "about#index"
   get "quem-somos", to: "quemsomos#index"
+  get "contato", to: "contato#index"
 end
