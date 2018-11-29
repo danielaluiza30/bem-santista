@@ -1,10 +1,10 @@
-<nav class="nav-bar">
-    <ul class="nav-list " id="nav">
-    	<li><a> <%= link_to "home", menu_home_path %></a></li>
-    	<li><a> <%= link_to "sobre", menu_sobre_path %></a></li>
-    	<li><a> <%= link_to "instituicao", menu_instituicao_path %></a></li>
-        <li><a> <%= link_to "quemsomos", menu_quemsomos_path %></a></li>
-        <li><a> <%= link_to "contato", menu_contato_path %></a></li>
-        <li><a> <%= link_to "souinstituicao", menu_souinstituicao_path %></a></li>
+<nav class="menu">
+    <ul>
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "Instituições", instituicoes_path %></li>
+        <li><%= link_to "Sobre", sobre_path %></li>
+        <li><%= link_to "Quem Somos", quem_somos_path %></li>
+        <li><%= link_to "Contato", contato_path %></li>
+        <li><a href="#">Sou Instituição</a></li>
     </ul>
 </nav>

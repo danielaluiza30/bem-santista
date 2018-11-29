@@ -7,6 +7,8 @@ main {
     margin: auto;
     box-sizing: border-box;
     min-height: calc(100vh - 92px);
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .page-title {
@@ -41,13 +43,15 @@ main {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-content: flex-start;
+    width: 100%;
 }
 
 .row-reverse {
     flex-direction: row-reverse;
 }
 
-[class*="cell-"] {
+[class*="cell"] {
     display: flex;
 }
 
@@ -65,4 +69,12 @@ main {
 
 .cell-6 {
     width: 50%;
+}
+
+.cell-auto {
+    flex-grow: 1;
+}
+
+.full-height {
+    align-content: stretch;
 }
