@@ -42,3 +42,8 @@ button {
 img {
     flex-shrink: 0;
 }
+
+#admin-interna {
+    padding: 0;
+    max-width: none;
+}
