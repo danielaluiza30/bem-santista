@@ -1,4 +1,6 @@
 .menu-admin {
+    z-index: 3;
+    background-color: #fff;
     width: 250px;
     border-right: 1px solid #aaa;
     nav {
@@ -13,6 +15,6 @@
         border-bottom: 1px solid #aaa;
     }
     a {
-        color: #888;
+        color: #666;
     }
 }

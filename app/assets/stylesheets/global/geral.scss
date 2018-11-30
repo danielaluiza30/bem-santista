@@ -55,6 +55,7 @@ main {
 [class*="cell"] {
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 .cell-12 {
@@ -86,5 +87,17 @@ main {
 }
 
 .action-row {
-    
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 0 2px 1px #aaa;
+    border-radius: 2px;
+}
+
+.gutters {
+    padding: 10px;
+    box-sizing: border-box;
 }
