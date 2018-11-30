@@ -13,7 +13,7 @@ class SouInstituicaoController < ApplicationController
         if action_name == 'index'
             return 'login'
         else
-            return 'application'
+            return 'instituicao_interna'
         end
     end
 end
