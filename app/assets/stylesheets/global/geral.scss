@@ -54,6 +54,7 @@ main {
 
 [class*="cell"] {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .cell-12 {
@@ -78,4 +79,12 @@ main {
 
 .full-height {
     align-content: stretch;
+}
+
+.no-wrap {
+    flex-wrap: nowrap;
+}
+
+.action-row {
+    
 }
