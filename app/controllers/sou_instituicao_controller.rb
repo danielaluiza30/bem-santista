@@ -7,6 +7,10 @@ class SouInstituicaoController < ApplicationController
         render "admin/necessidades"
     end
     
+    def perfil
+        render "admin/perfil"
+    end
+    
     layout :choose_layout
   
     def choose_layout
