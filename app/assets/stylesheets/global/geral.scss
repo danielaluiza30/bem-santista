@@ -9,6 +9,7 @@ main {
     min-height: calc(100vh - 92px);
     display: flex;
     flex-wrap: wrap;
+    align-content: flex-start;
 }
 
 .page-title {
