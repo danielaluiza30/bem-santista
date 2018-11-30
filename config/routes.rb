@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   get "instituicoes", to: "instituicoes#index"
   
   get "sou-instituicao", to: "sou_instituicao#index"
+  get "sou_instituicao/necessidades", to: "sou_instituicao#necessidades"
 end
