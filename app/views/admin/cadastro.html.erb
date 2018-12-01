@@ -31,6 +31,12 @@
                 <div class="cell-6 gutters">
                     <div class="data-box">
                         <label>
+                            CEP:<br>
+                            <input type="text" />
+                        </label>
+                    </div>
+                    <div class="data-box">
+                        <label>
                             Rua:<br>
                             <input type="text" />
                         </label>
@@ -47,15 +53,12 @@
                             <input type="text" />
                         </label>
                     </div>
-                    <div class="data-box">
-                        <label>
-                            CEP:<br>
-                            <input type="text" />
-                        </label>
-                    </div>
                 </div>
                 <div class="cell-12 justify-center gutters">
                     <button class="btn btn-alterar-perfil">Alterar</button>
+                </div>
+                <div class="cell-12 justify-center gutters">
+                    <%= link_to "Voltar", sou_instituicao_path, class: "link-back" %>
                 </div>
             </div>
         </form>
