@@ -7,6 +7,10 @@ class SouInstituicaoController < ApplicationController
         render "admin/necessidades"
     end
     
+    def newnecessidade
+        render "admin/novanecessidade"
+    end
+    
     def perfil
         render "admin/perfil"
     end
