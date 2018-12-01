@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  get 'login/login'
-  get 'login/logout'
-  get 'login/auth'
+
   resources :equipes
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root "application#index"
@@ -16,6 +14,8 @@ Rails.application.routes.draw do
   get "sou-instituicao/perfil", to: "sou_instituicao#perfil"
   get "sou-instituicao/nova-necessidade", to: "sou_instituicao#novanecessidade"
   
-  
+  get 'login', to: "login#login", as: "login"
+  get 'logout', to: "login#logout", as: "logout"
+  post 'auth', to: "login#auth", as: "login_auth"
   
 end
