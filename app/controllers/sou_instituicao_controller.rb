@@ -22,7 +22,7 @@ class SouInstituicaoController < ApplicationController
     layout :choose_layout
   
     def choose_layout
-        if action_name == 'index'
+        if action_name == 'index' || action_name == 'cadastro'
             return 'login'
         else
             return 'instituicao_interna'
