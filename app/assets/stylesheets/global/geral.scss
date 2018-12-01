@@ -75,8 +75,13 @@ main {
     width: 50%;
 }
 
+.cell-5 {
+    width: 41.66%;
+}
+
 .cell-auto {
     flex-grow: 1;
+    flex-basis: auto;
 }
 
 .full-height {
