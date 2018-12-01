@@ -15,9 +15,9 @@ ActiveRecord::Schema.define(version: 2018_12_01_151329) do
   create_table "equipes", force: :cascade do |t|
     t.string "nome"
     t.string "descricao"
-    t.string "foto"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "foto"
   end
 
 end
