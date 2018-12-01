@@ -1,0 +1,78 @@
+<div class="row align-center justify-center">
+        <%= form_for(@instituicao, url: instituicao_create_path) do |form| %>
+            <div class="row">
+                <div class="cell-6 gutters">
+                    <div class="data-box">
+                        <label>
+                            Nome fantasia:<br>
+                            <%= form.text_field :nome_fantasia %>
+                        </label>
+                    </div>
+                    <div class="data-box">
+                        <label>
+                            Razão social:<br>
+                            <%= form.text_field :razao_social %>
+                        </label>
+                    </div>
+                    <div class="data-box">
+                        <label>
+                            CNPJ:<br>
+                            <%= form.text_field :cnpj %>
+                        </label>
+                    </div>
+                    <div class="data-box">
+                        <label>
+                            E-mail:<br>
+                            <%= form.text_field :email %>
+                        </label>
+                    </div>
+                    <div class="data-box">
+                        <label>
+                            Senha:<br>
+                            <%= form.password_field :password %>
+                        </label>
+                    </div>
+                </div>
+                <div class="cell-6 gutters">
+                    <div class="data-box">
+                        <label>
+                            CEP:<br>
+                            <%= form.text_field :cep %>
+                        </label>
+                    </div>
+                    <div class="data-box">
+                        <label>
+                            Rua:<br>
+                            <%= form.text_field :rua %>
+                        </label>
+                    </div>
+                    <div class="data-box">
+                        <label>
+                            Número:<br>
+                            <%= form.text_field :numero %>
+                        </label>
+                    </div>
+                    <div class="data-box">
+                        <label>
+                            Bairro:<br>
+                            <%= form.text_field :bairro %>
+                        </label>
+                    </div>
+                    <div class="data-box">
+                        <label>
+                            Confirma senha:<br>
+                            <%= form.password_field :password_confirmation %>
+                            
+                        </label>
+                    </div>
+                </div>
+                <div class="cell-12 justify-center gutters">
+                    <%= form.submit "Salvar", class: "btn btn-alterar-perfil" %>
+                </div>
+                <div class="cell-12 justify-center gutters">
+                    <%= link_to "Voltar", sou_instituicao_path, class: "link-back" %>
+                </div>
+            </div>
+        <% end %>
+    </div>
+</main>

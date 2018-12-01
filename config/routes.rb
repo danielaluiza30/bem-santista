@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
 
-  get 'instituicao/new'
-  get 'instituicao/create'
+  get 'sou-instituicao/cadastro', to: "instituicao#new"
+  get 'instituicao/create', to: "instituicao#create", as: "instituicao_create"
   get 'instituicao/edit'
   get 'instituicao/update'
   get 'instituicao/index'
+  
+  
   resources :equipes
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root "application#index"
@@ -14,7 +16,7 @@ Rails.application.routes.draw do
   get "instituicoes", to: "instituicoes#index"
   
   get "sou-instituicao", to: "sou_instituicao#index"
-  get "sou-instituicao/cadastro", to: "sou_instituicao#cadastro"
+  # get "sou-instituicao/cadastro", to: "sou_instituicao#cadastro"
   get "sou-instituicao/necessidades", to: "sou_instituicao#necessidades"
   get "sou-instituicao/perfil", to: "sou_instituicao#perfil"
   get "sou-instituicao/nova-necessidade", to: "sou_instituicao#novanecessidade"
