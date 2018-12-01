@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  # resources :equipes
+  resources :equipes
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root "application#index"
   get "sobre", to: "about#index"
@@ -12,4 +12,7 @@ Rails.application.routes.draw do
   get "sou-instituicao/necessidades", to: "sou_instituicao#necessidades"
   get "sou-instituicao/perfil", to: "sou_instituicao#perfil"
   get "sou-instituicao/nova-necessidade", to: "sou_instituicao#novanecessidade"
+  
+  
+  
 end

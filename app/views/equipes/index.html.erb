@@ -1,3 +1,4 @@
+<main>
 <p id="notice"><%= notice %></p>
 
 <h1>Equipes</h1>
@@ -16,6 +17,7 @@
       <tr>
         <td><%= equipe.nome %></td>
         <td><%= equipe.descricao %></td>
+        <td><%= equipe.foto %></td>
         <td><%= link_to 'Show', equipe %></td>
         <td><%= link_to 'Edit', edit_equipe_path(equipe) %></td>
         <td><%= link_to 'Destroy', equipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -27,3 +29,4 @@
 <br>
 
 <%= link_to 'New Equipe', new_equipe_path %>
+</main>

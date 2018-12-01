@@ -69,6 +69,6 @@ class EquipesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def equipe_params
-      params.require(:equipe).permit(:nome, :descricao)
+      params.require(:equipe).permit(:nome, :descricao, :foto)
     end
 end
