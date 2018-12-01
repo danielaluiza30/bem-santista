@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+  get 'instituicao/new'
+  get 'instituicao/create'
+  get 'instituicao/edit'
+  get 'instituicao/update'
+  get 'instituicao/index'
   resources :equipes
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root "application#index"
