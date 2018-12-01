@@ -3,6 +3,10 @@ class SouInstituicaoController < ApplicationController
         render "admin/index"
     end
     
+    def cadastro
+        render "admin/cadastro"
+    end
+    
     def necessidades
         render "admin/necessidades"
     end
