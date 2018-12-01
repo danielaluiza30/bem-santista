@@ -7,7 +7,7 @@ class SouInstituicaoController < ApplicationController
         render "admin/necessidades"
     end
     
-    def newnecessidade
+    def novanecessidade
         render "admin/novanecessidade"
     end
     

@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   get "sou-instituicao", to: "sou_instituicao#index"
   get "sou-instituicao/necessidades", to: "sou_instituicao#necessidades"
   get "sou-instituicao/perfil", to: "sou_instituicao#perfil"
+  get "sou-instituicao/nova-necessidade", to: "sou_instituicao#novanecessidade"
 end
