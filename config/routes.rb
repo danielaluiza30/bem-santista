@@ -15,14 +15,14 @@ Rails.application.routes.draw do
   get "contato", to: "contato#index"
   get "instituicoes", to: "instituicoes#index"
   
-  get "sou-instituicao", to: "sou_instituicao#index"
   # get "sou-instituicao/cadastro", to: "sou_instituicao#cadastro"
   get "sou-instituicao/necessidades", to: "sou_instituicao#necessidades"
   get "sou-instituicao/perfil", to: "sou_instituicao#perfil"
   get "sou-instituicao/nova-necessidade", to: "sou_instituicao#novanecessidade"
   
-  get 'login', to: "login#login", as: "login"
-  get 'logout', to: "login#logout", as: "logout"
+  
+  get "sou-instituicao", to: "login#login", as: "login"
   post 'auth', to: "login#auth", as: "login_auth"
+  get 'logout', to: "login#logout", as: "logout"
   
 end

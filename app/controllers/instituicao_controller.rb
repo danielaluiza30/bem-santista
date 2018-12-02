@@ -27,6 +27,6 @@ class InstituicaoController < ApplicationController
     
     private
         def instituicao_params
-            params.require(:instituicao).permit(:nome_fantasia, :razao_social, :cnpj, :email, :password, :cep, :rua, :numero, :bairro)
+            params.require(:instituicao).permit(:nome_fantasia, :razao_social, :cnpj, :email, :password, :cep, :rua, :numero, :bairro, :tel)
         end
 end
