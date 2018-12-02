@@ -16,9 +16,9 @@ Rails.application.routes.draw do
   get "instituicoes", to: "instituicoes#index"
   
   # get "sou-instituicao/cadastro", to: "sou_instituicao#cadastro"
-  get "sou-instituicao/necessidades", to: "sou_instituicao#necessidades"
+  get "sou-instituicao/necessidades/:id", to: "instituicao#necessidades", as: "sou_instituicao_necessidades"
   get "sou-instituicao/perfil/:id", to: "instituicao#edit", as: "sou_instituicao_perfil"
-  patch "sou-instituicao/perfil:id", to: "instituicao#update", as: "sou_instituicao_update"
+  patch "sou-instituicao/perfi/:id", to: "instituicao#update", as: "sou_instituicao_update"
   
   get "sou-instituicao/nova-necessidade", to: "sou_instituicao#novanecessidade"
   

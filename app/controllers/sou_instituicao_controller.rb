@@ -12,6 +12,7 @@ class SouInstituicaoController < ApplicationController
     end
     
     def necessidades
+        @instituicao = Instituicao.find(params[:id])
         render "admin/necessidades"
     end
     
