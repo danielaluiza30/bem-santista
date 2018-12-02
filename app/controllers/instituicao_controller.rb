@@ -1,4 +1,7 @@
 class InstituicaoController < ApplicationController
+    # include LoginHelper  
+    # before_action :logged_in_user, only: [:edit, :update, :show]
+    # before_action :correct_user,   only: [:edit, :update]
 
     
     def new
@@ -15,6 +18,14 @@ class InstituicaoController < ApplicationController
         end
     end
     
+    def edit
+        @instituicao = Instituicao.find(params[:id])
+    end
+    
+    
+    def update
+    end
+    
     layout :choose_layout
   
     def choose_layout
@@ -28,5 +39,17 @@ class InstituicaoController < ApplicationController
     private
         def instituicao_params
             params.require(:instituicao).permit(:nome_fantasia, :razao_social, :cnpj, :email, :password, :cep, :rua, :numero, :bairro, :tel)
+        end
+    
+        def logged_in_user
+            unless logged_in?
+                flash[:danger] = "Por favor faça o login "
+                redirect_to login_path
+            end
+        end
+
+        def correct_user
+            @instituicao = Instituicao.find(params[:id])
+            redirect_to(root_url) unless @instituicao == current_user
         end
 end

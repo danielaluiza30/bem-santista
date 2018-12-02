@@ -1,4 +1,8 @@
 class SouInstituicaoController < ApplicationController
+    # include LoginHelper  
+    # before_action :logged_in_user, only: [:necessidades, :novanecessidade, :perfil]
+    # before_action :correct_user,   only: [:edit, :update]
+    
     def index
         render "admin/index"
     end

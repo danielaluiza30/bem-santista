@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   
   # get "sou-instituicao/cadastro", to: "sou_instituicao#cadastro"
   get "sou-instituicao/necessidades", to: "sou_instituicao#necessidades"
-  get "sou-instituicao/perfil", to: "sou_instituicao#perfil"
+  get "sou-instituicao/perfil/:id", to: "instituicao#edit", as: "sou_instituicao_perfil"
   get "sou-instituicao/nova-necessidade", to: "sou_instituicao#novanecessidade"
   
   
