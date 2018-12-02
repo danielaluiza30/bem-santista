@@ -5,16 +5,15 @@ class InstituicaoController < ApplicationController
         @instituicao = Instituicao.new
     end
     
-    
     def create
         @instituicao = Instituicao.new(instituicao_params)
-    if @instituicao.save 
-      flash[:success] = "instituicao cadastrado com sucesso."
-      redirect_to sou_instituicao_path(@user)
-    else
-      redirect_to sou_instituicao_cadastro_path
+        if @instituicao.save 
+            flash[:success] = "instituicao cadastrado com sucesso."
+            redirect_to sou_instituicao_path(@instituicao)
+        else
+            redirect_to sou_instituicao_cadastro_path
+        end
     end
-  end
     
     layout :choose_layout
   
@@ -27,7 +26,7 @@ class InstituicaoController < ApplicationController
     end
     
     private
-        def user_params
-            params.require(:instituicao).permit(:name, :email, :password, :bio, :img)
+        def instituicao_params
+            params.require(:instituicao).permit(:nome_fantasia, :razao_social, :cnpj, :email, :password, :cep, :rua, :numero, :bairro)
         end
 end

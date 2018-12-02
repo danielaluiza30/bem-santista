@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   get 'sou-instituicao/cadastro', to: "instituicao#new"
-  get 'instituicao/create', to: "instituicao#create", as: "instituicao_create"
+  post 'instituicao/create', to: "instituicao#create", as: "instituicao_create"
   get 'instituicao/edit'
   get 'instituicao/update'
   get 'instituicao/index'
