@@ -20,10 +20,18 @@ class InstituicaoController < ApplicationController
     
     def edit
         @instituicao = Instituicao.find(params[:id])
+        render "admin/perfil" 
     end
     
     
     def update
+        @instituicao = Instituicao.find(params[:id])
+        if @instituicao.update(instituicao_params)
+            flash[:success] = "Usuario editado com sucesso."
+            redirect_to sou_instituicao_perfil_path(@instituicao)
+        else
+            redirect_to sou_instituicao_perfil_path(@instituicao)
+        end
     end
     
     layout :choose_layout

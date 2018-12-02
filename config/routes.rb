@@ -2,8 +2,8 @@ Rails.application.routes.draw do
 
   get 'sou-instituicao/cadastro', to: "instituicao#new"
   post 'instituicao/create', to: "instituicao#create", as: "instituicao_create"
-  get 'instituicao/edit'
-  get 'instituicao/update'
+  
+  
   get 'instituicao/index'
   
   
@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   # get "sou-instituicao/cadastro", to: "sou_instituicao#cadastro"
   get "sou-instituicao/necessidades", to: "sou_instituicao#necessidades"
   get "sou-instituicao/perfil/:id", to: "instituicao#edit", as: "sou_instituicao_perfil"
+  patch "sou-instituicao/perfil:id", to: "instituicao#update", as: "sou_instituicao_update"
+  
   get "sou-instituicao/nova-necessidade", to: "sou_instituicao#novanecessidade"
   
   
