@@ -1,21 +1,21 @@
 <div class="cell-auto gutters">
     <div class="row">
         <div class="cell-12">
-            <form action="" method="POST" class="form-novanecessidade">
+            <%= form_for(@novanecessidade, url: sou_instituicao_nova_necessidade_create_path(@novanecessidade)) do |form| %>
                 <div class="row">
                     <div class="cell-12">
                         <div class="data-box">
                             <label>
                                 Necessidade:<br>
-                                <input type="text" />
+                                <%= form.text_field :descricao %>
                             </label>
                         </div>
                     </div>
                     <div class="cell-12">
-                        <button class="btn">Adicionar</button>
+                        <%= form.submit "Adicionar", class: "btn btn-alterar-perfil" %>
                     </div>
                 </div>
-            </form>
+            <% end %>
         </div>
     </div>
 </div>

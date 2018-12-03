@@ -20,7 +20,8 @@ Rails.application.routes.draw do
   get "sou-instituicao/perfil/:id", to: "instituicao#edit", as: "sou_instituicao_perfil"
   patch "sou-instituicao/perfi/:id", to: "instituicao#update", as: "sou_instituicao_update"
   
-  get "sou-instituicao/nova-necessidade", to: "sou_instituicao#novanecessidade"
+  get "sou-instituicao/nova-necessidade/:id", to: "instituicao#formnovanecessidade", as: "sou_instituicao_nova_necessidade"
+  post "sou-instituicao/nova-necessidade/:id", to: "instituicao#novanecessidade", as: "sou_instituicao_nova_necessidade_create"
   
   
   get "sou-instituicao", to: "login#login", as: "login"

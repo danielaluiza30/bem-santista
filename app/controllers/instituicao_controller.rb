@@ -9,6 +9,23 @@ class InstituicaoController < ApplicationController
     end
     
     
+    def formnovanecessidade
+        @instituicao = Instituicao.find(params[:id])
+        @novanecessidade = Necessidade.new
+        render "admin/novanecessidade"
+    end
+    
+    def novanecessidade
+        @novanecessidade = Necessidade.new(novanecessidade_params)
+        if @novanecessidade.save 
+            flash[:success] = "instituicao cadastrado com sucesso."
+            redirect_to sou_instituicao_path(@instituicao)
+        else
+            redirect_to sou_instituicao_cadastro_path
+        end
+    end
+    
+    
     def new
         @instituicao = Instituicao.new
     end
@@ -27,7 +44,6 @@ class InstituicaoController < ApplicationController
         @instituicao = Instituicao.find(params[:id])
         render "admin/perfil" 
     end
-    
     
     def update
         @instituicao = Instituicao.find(params[:id])
@@ -52,6 +68,10 @@ class InstituicaoController < ApplicationController
     private
         def instituicao_params
             params.require(:instituicao).permit(:nome_fantasia, :razao_social, :cnpj, :email, :password, :cep, :rua, :numero, :bairro, :tel)
+        end
+    
+        def novanecessidade_params
+            params.require(:novanecessidade).permit(:descricao, :instituicao_id)
         end
     
         def logged_in_user
