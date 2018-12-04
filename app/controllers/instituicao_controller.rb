@@ -34,7 +34,7 @@ class InstituicaoController < ApplicationController
         @instituicao = Instituicao.new(instituicao_params)
         if @instituicao.save 
             flash[:success] = "instituicao cadastrado com sucesso."
-            redirect_to sou_instituicao_path(@instituicao)
+            redirect_to login_path(@instituicao)
         else
             redirect_to sou_instituicao_cadastro_path
         end
